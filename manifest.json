@@ -1,0 +1,11 @@
+{
+  "name": "SpeakByte",
+  "version": "1.0",
+  "description": "A Chrome extension to speech the selected word and translate it.",
+  "manifest_version": 3,
+  "permissions": ["contextMenus", "tts"],
+  "background": {
+    "service_worker": "service_worker.js",
+    "type": "module"
+  }
+}
