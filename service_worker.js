@@ -1,13 +1,13 @@
-chrome.runtime.onInstalled.addListener(function () {
+chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
-    id: "speakWord",
+    id: "SpeakByte",
     title: "Speak '%s'",
     contexts: ["selection"],
   });
 });
 
-chrome.contextMenus.onClicked.addListener(function (info) {
-  if (info.menuItemId === "speakWord" && info.selectionText) {
+chrome.contextMenus.onClicked.addListener((info) => {
+  if (info.menuItemId === "SpeakByte" && info.selectionText) {
     chrome.tts.speak(info.selectionText, { lang: "en-US" });
   }
 });
